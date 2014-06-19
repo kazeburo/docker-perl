@@ -1,8 +1,8 @@
 FROM kazeburo/perl-build
 MAINTAINER Masahiro Nagano <kazeburo@gmail.com>
 
-ENV BUILD_PERL_VER 5.20
-ENV BUILD_PERL_REL 0
+ENV BUILD_PERL_VER 5.18
+ENV BUILD_PERL_REL 2
 
 RUN perl-build -DDEBUGGING=-g $BUILD_PERL_VER.$BUILD_PERL_REL /opt/perl-$BUILD_PERL_VER > /tmp/perl-install.log 2>&1
 RUN rm -f /tmp/perl-install.log
