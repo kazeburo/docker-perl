@@ -11,4 +11,8 @@ RUN echo "export PATH=/opt/perl-$BUILD_PERL_VER/bin:\$PATH" > /etc/profile.d/per
 # install cpanm,carton and start_server
 RUN curl -s --sslv3 -L http://cpanmin.us/ | /opt/perl-$BUILD_PERL_VER/bin/perl - --notest App::cpanminus Carton Server::Starter
 
+# env
+ENV PATH /opt/perl-$BUILD_PERL_VER/bin:$PATH
+
+
 CMD perl -v
